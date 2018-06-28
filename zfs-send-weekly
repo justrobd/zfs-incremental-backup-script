@@ -1,0 +1,3 @@
+zfs send -i $(zfs get -H -t snapshot name -o value | grep _weekly | tr -s '\n' ' ' | cut -d ' ' -f 1-2)
+
+# Maybe change grep to another regular expression. 
